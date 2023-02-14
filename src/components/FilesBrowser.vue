@@ -8,6 +8,7 @@ export default {
   methods: {
     selectFiles() {
       this.selectedFiles = this.$refs.fileInput.files;
+      console.log(this.selectedFiles)
     },
 
     formatSize(size) {
