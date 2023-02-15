@@ -8,7 +8,7 @@ export default {
   methods: {
     selectFiles() {
       this.selectedFiles = this.$refs.fileInput.files;
-      console.log(this.selectedFiles)
+      console.log(this.selectedFiles);
     },
 
     formatSize(size) {
@@ -19,7 +19,7 @@ export default {
         ["B", "kB", "MB", "GB", "TB"][i]
       );
     },
-  }
+  },
 };
 </script>
 
@@ -27,10 +27,21 @@ export default {
   <div class="container mt-2">
     <div class="mb-3">
       <div class="input-group mb-3">
-        <input type="file" class="form-control shadow-none" id="fileInput" ref="fileInput" @change="selectFiles"
-          multiple />
-        <button :disabled="selectedFiles.length === 0" class="btn btn-success shadow-none" type="button"
-          id="button-addon2">Upload
+        <input
+          type="file"
+          class="form-control shadow-none"
+          id="fileInput"
+          ref="fileInput"
+          @change="selectFiles"
+          multiple
+        />
+        <button
+          :disabled="selectedFiles.length === 0"
+          class="btn btn-success shadow-none"
+          type="button"
+          id="button-addon2"
+        >
+          Upload
         </button>
       </div>
       <div v-if="selectedFiles.length > 0">
@@ -49,10 +60,18 @@ export default {
           </tbody>
         </table>
         <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
-            aria-valuemax="100">25%</div>
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 25%"
+            aria-valuenow="25"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            25%
+          </div>
         </div>
-        <br>
+        <br />
       </div>
     </div>
   </div>
