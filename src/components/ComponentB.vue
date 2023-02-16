@@ -1,6 +1,6 @@
 <template>
   <div>
-    <component-c />
+    <ComponentC />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Component A user name - {{ name }}</h2>
-    <component-b />
+    <ComponentB />
   </div>
 </template>
 

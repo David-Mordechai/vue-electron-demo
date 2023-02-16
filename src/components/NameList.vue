@@ -1,7 +1,7 @@
 <template>
     <h3 v-for="name in names" :key="name.firstName">
         <slot :firstName="name.firstName" :lastName="name.lastName"></slot>
-</h3>
+    </h3>
 </template>
 
 <script>
@@ -29,4 +29,6 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

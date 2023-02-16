@@ -29,6 +29,13 @@
       {{ slotProps.firstName }}
     </template>
   </NameList>
+  <hr>
+  <div>
+    <button @click="activeTab = 'tab-a'">Tab A</button>
+    <button @click="activeTab = 'tab-b'">Tab B</button>
+    <button @click="activeTab = 'tab-c'">Tab C</button>
+    <component :is="activeTab"></component>
+  </div>
 </template>
 
 <script>
@@ -41,13 +48,17 @@ import ComponentA from "./components/ComponentA.vue";
 import Popup from "./components/Popup.vue";
 import Input from "./components/input.vue";
 import NameList from "./components/NameList.vue";
+import TabA from "./components/TabA.vue";
+import TabB from "./components/TabB.vue";
+import TabC from "./components/TabC.vue";
 
 export default {
-  components: { FilesBrowser, Learning, Watchers, Article, ComponentA, Popup, Input, NameList },
+  components: { FilesBrowser, Learning, Watchers, Article, ComponentA, Popup, Input, NameList, TabA, TabB, TabC },
   data() {
     return {
       showPopup: false,
-      name: ''
+      name: '',
+      activeTab: 'tab-a'
     };
   },
   methods: {
