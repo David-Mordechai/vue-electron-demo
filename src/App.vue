@@ -13,9 +13,26 @@
   <Popup v-show="showPopup" @close="closePopup" />
   <hr>
   <Input v-model="name" />
+  <hr>
+  <NameList>
+    <template v-slot:default="slotProps">
+      {{ slotProps.firstName }} {{ slotProps.lastName }}
+    </template>
+  </NameList>
+  <NameList>
+    <template v-slot:default="slotProps">
+      {{ slotProps.lastName }} {{ slotProps.firstName }}
+    </template>
+  </NameList>
+  <NameList>
+    <template v-slot:default="slotProps">
+      {{ slotProps.firstName }}
+    </template>
+  </NameList>
 </template>
 
 <script>
+
 import Article from "./components/Article.vue";
 import FilesBrowser from "./components/FilesBrowser.vue";
 import Learning from "./components/Learning.vue";
@@ -23,8 +40,10 @@ import Watchers from "./components/Watchers.vue";
 import ComponentA from "./components/ComponentA.vue";
 import Popup from "./components/Popup.vue";
 import Input from "./components/input.vue";
+import NameList from "./components/NameList.vue";
+
 export default {
-  components: { FilesBrowser, Learning, Watchers, Article, ComponentA, Popup, Input },
+  components: { FilesBrowser, Learning, Watchers, Article, ComponentA, Popup, Input, NameList },
   data() {
     return {
       showPopup: false,
