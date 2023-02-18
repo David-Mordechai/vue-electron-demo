@@ -34,7 +34,9 @@
     <button @click="activeTab = 'tab-a'">Tab A</button>
     <button @click="activeTab = 'tab-b'">Tab B</button>
     <button @click="activeTab = 'tab-c'">Tab C</button>
-    <component :is="activeTab"></component>
+    <keep-alive>
+      <component :is="activeTab"></component>
+    </keep-alive>
   </div>
 </template>
 
