@@ -5,15 +5,20 @@
   <hr />
   <Watchers />
   <hr />
-  <Article title="Article Title" :likes="50" :isPublished="true" id="my-article" />
+  <Article
+    title="Article Title"
+    :likes="50"
+    :isPublished="true"
+    id="my-article"
+  />
   <hr />
   <ComponentA />
   <hr />
   <button @click="showPopup = true">Show popup</button>
   <Popup v-show="showPopup" @close="closePopup" />
-  <hr>
+  <hr />
   <Input v-model="name" />
-  <hr>
+  <hr />
   <NameList>
     <template v-slot:default="slotProps">
       {{ slotProps.firstName }} {{ slotProps.lastName }}
@@ -29,7 +34,7 @@
       {{ slotProps.firstName }}
     </template>
   </NameList>
-  <hr>
+  <hr />
   <div>
     <button @click="activeTab = 'tab-a'">Tab A</button>
     <button @click="activeTab = 'tab-b'">Tab B</button>
@@ -38,10 +43,12 @@
       <component :is="activeTab"></component>
     </keep-alive>
   </div>
+  <hr />
+  <ClickCounter />
+  <HoverCounter />
 </template>
 
 <script>
-
 import Article from "./components/Article.vue";
 import FilesBrowser from "./components/FilesBrowser.vue";
 import Learning from "./components/Learning.vue";
@@ -53,14 +60,35 @@ import NameList from "./components/NameList.vue";
 import TabA from "./components/TabA.vue";
 import TabB from "./components/TabB.vue";
 import TabC from "./components/TabC.vue";
+import { myFunc, myFunc2 } from "./services/restService.js";
+import ClickCounter from "./components/clickCounter.vue";
+import HoverCounter from "./components/hoverCounter.vue";
 
 export default {
-  components: { FilesBrowser, Learning, Watchers, Article, ComponentA, Popup, Input, NameList, TabA, TabB, TabC },
+  components: {
+    FilesBrowser,
+    Learning,
+    Watchers,
+    Article,
+    ComponentA,
+    Popup,
+    Input,
+    NameList,
+    TabA,
+    TabB,
+    TabC,
+    ClickCounter,
+    HoverCounter
+},
+  created() {
+    console.log(myFunc());
+    console.log(myFunc2());
+  },
   data() {
     return {
       showPopup: false,
-      name: '',
-      activeTab: 'tab-a'
+      name: "",
+      activeTab: "tab-a",
     };
   },
   methods: {
