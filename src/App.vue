@@ -46,6 +46,13 @@
   <hr />
   <ClickCounter />
   <HoverCounter />
+  <hr />
+  <Data />
+  <hr />
+  <DemoOne />
+  <DemoTwo />
+  <hr>
+  <Methods />
 </template>
 
 <script>
@@ -63,6 +70,10 @@ import TabC from "./components/TabC.vue";
 import { myFunc, myFunc2 } from "./services/restService.js";
 import ClickCounter from "./components/clickCounter.vue";
 import HoverCounter from "./components/hoverCounter.vue";
+import Data from "./components/compositionApi/Data.vue";
+import DemoOne from "./components/compositionApi/DemoOne.vue";
+import DemoTwo from "./components/compositionApi/DemoTwo.vue";
+import Methods from "./components/compositionApi/Methods.vue";
 
 export default {
   components: {
@@ -78,8 +89,12 @@ export default {
     TabB,
     TabC,
     ClickCounter,
-    HoverCounter
-},
+    HoverCounter,
+    Data,
+    DemoOne,
+    DemoTwo,
+    Methods,
+  },
   created() {
     console.log(myFunc());
     console.log(myFunc2());
