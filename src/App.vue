@@ -53,6 +53,12 @@
   <DemoTwo />
   <hr>
   <Methods />
+  <hr>
+  <VModel />
+  <hr>
+  <Computed />
+  <hr>
+  <Watch />
 </template>
 
 <script>
@@ -74,6 +80,9 @@ import Data from "./components/compositionApi/Data.vue";
 import DemoOne from "./components/compositionApi/DemoOne.vue";
 import DemoTwo from "./components/compositionApi/DemoTwo.vue";
 import Methods from "./components/compositionApi/Methods.vue";
+import VModel from "./components/compositionApi/VModel.vue";
+import Computed from "./components/compositionApi/Computed.vue";
+import Watch from "./components/Watch.vue";
 
 export default {
   components: {
@@ -94,6 +103,9 @@ export default {
     DemoOne,
     DemoTwo,
     Methods,
+    VModel,
+    Computed,
+    Watch,
   },
   created() {
     console.log(myFunc());
