@@ -59,6 +59,17 @@
   <Computed />
   <hr>
   <Watch />
+  <hr>
+  <ProvideInject />,
+  <hr>
+  <TemplateRef />
+  <hr>
+  <Person />
+  <hr>
+  <clickCounterComposition />
+  <hoverCounterComposition />
+  <hr>
+  <br>
 </template>
 
 <script>
@@ -83,6 +94,11 @@ import Methods from "./components/compositionApi/Methods.vue";
 import VModel from "./components/compositionApi/VModel.vue";
 import Computed from "./components/compositionApi/Computed.vue";
 import Watch from "./components/Watch.vue";
+import ProvideInject from "./components/compositionApi/ProvideInject.vue";
+import TemplateRef from "./components/compositionApi/TemplateRef.vue";
+import Person from "./components/compositionApi/Person.vue";
+import clickCounterComposition from "./components/compositionApi/clickCounterComposition.vue";
+import hoverCounterComposition from "./components/compositionApi/hoverCounterComposition.vue";
 
 export default {
   components: {
@@ -106,6 +122,11 @@ export default {
     VModel,
     Computed,
     Watch,
+    ProvideInject,
+    TemplateRef,
+    Person,
+    clickCounterComposition,
+    hoverCounterComposition
   },
   created() {
     console.log(myFunc());
